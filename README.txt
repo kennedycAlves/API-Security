@@ -72,3 +72,5 @@ Revogação de Token: A API permite a revogação de tokens previamente emitidos
 Tratamento de Exceções: É implementado um tratamento adequado de exceções em todo o código, aumentando a segurança e prevenindo possíveis vazamentos de informações.
 
 Validação de Entrada: A entrada de dados é validada para garantir que os campos obrigatórios estejam presentes e mitigar possíveis ataques de injeção de código.
+
+Teste de Segurança com Burp Suite: Para validar as proteções de segurança, foi utilizado o Burp Suite para teste de segurança, garantindo robustez e eficácia nas medidas implementadas.
