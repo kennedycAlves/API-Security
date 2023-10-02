@@ -19,8 +19,7 @@ A API utiliza JSON Web Tokens (JWT) para autenticação. Para obter um token JWT
 }
 Resposta de Sucesso
 
-json
-Copy code
+
 {
   "message": "Login bem-sucedido",
   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
@@ -30,16 +29,14 @@ Endpoint: POST /register
 
 Requisição
 
-json
-Copy code
+
 {
   "username": "novo_usuario",
   "password": "nova_senha"
 }
 Resposta de Sucesso
 
-json
-Copy code
+
 {
   "message": "Usuário registrado com sucesso"
 }
@@ -49,8 +46,7 @@ Endpoint: POST /record
 
 Requisição
 
-json
-Copy code
+
 {
   "name": "Nome do Registro",
   "address": "Endereço do Registro",
@@ -58,8 +54,7 @@ Copy code
 }
 Resposta de Sucesso
 
-json
-Copy code
+
 {
   "message": "Registro criado com sucesso"
 }
@@ -68,8 +63,7 @@ Endpoint: GET /users
 
 Resposta de Sucesso
 
-json
-Copy code
+
 {
   "Data": [
     {
@@ -86,8 +80,7 @@ Endpoint: PUT /record/<uuid>
 
 Requisição
 
-json
-Copy code
+
 {
   "name": "Novo Nome do Registro",
   "address": "Novo Endereço do Registro",
@@ -95,8 +88,7 @@ Copy code
 }
 Resposta de Sucesso
 
-json
-Copy code
+
 {
   "message": "Registro atualizado com sucesso"
 }
@@ -105,8 +97,7 @@ Endpoint: DELETE /record/<uuid>
 
 Resposta de Sucesso
 
-json
-Copy code
+
 {
   "message": "Registro excluído com sucesso"
 }
@@ -130,8 +121,7 @@ Copy code
 Authorization: Bearer <token>
 Resposta de Sucesso
 
-json
-Copy code
+
 {
   "message": "Token revogado com sucesso"
 }
@@ -140,7 +130,5 @@ Consulte o código fonte para mais detalhes sobre a implementação da API.
 Licença
 Este projeto está licenciado sob a MIT License.
 
-perl
-Copy code
 
 Agora, você pode copiar este conteúdo e colar em um arquivo chamado `API_DOCUMENTATION.md` no seu repositório no GitHub. Certifique-se de que o arquivo está no diretório raiz do seu projeto.
