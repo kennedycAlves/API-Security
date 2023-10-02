@@ -1,28 +1,11 @@
-name: Testes de Segurança
-
-on:
-  push:
-    branches:
-      - main
-
+name: Example workflow for Python-3.8 using Snyk
+on: push
 jobs:
-  security_tests:
+  security:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout do código
-      uses: actions/checkout@v2
-
-    - name: Setup Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.3'  # Escolha a versão desejada do Python
-
-    - name: Instalar dependências
-      run: pip install -r requirements.txt
-
-    - name: Executar testes de segurança com Bandit
-      run: bandit -r .
-
-    - name: Executar testes de segurança com Snyk
-      run: npx snyk test
+      - uses: actions/checkout@master
+      - name: Run Snyk to check for vulnerabilities
+        uses: snyk/actions/python-3.8@master
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
