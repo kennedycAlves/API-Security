@@ -75,3 +75,15 @@ Tratamento de Exceções: É implementado um tratamento adequado de exceções e
 Validação de Entrada: A entrada de dados é validada para garantir que os campos obrigatórios estejam presentes e mitigar possíveis ataques de injeção de código.
 
 Teste de Segurança com Burp Suite: Para validar as proteções de segurança, foi utilizado o Burp Suite para teste de segurança, garantindo robustez e eficácia nas medidas implementadas.
+
+Integração de Segurança com GitHub Actions
+Este repositório possui uma integração com GitHub Actions para garantir a segurança da aplicação por meio de testes de segurança no código. Utilizamos a ferramenta Snyk para identificar possíveis vulnerabilidades e práticas inseguras em nosso código.
+
+GitHub Actions
+As GitHub Actions são workflows personalizados que automatizam tarefas no repositório. Neste caso, configuramos uma Action que roda os testes de segurança utilizando Snyk. Sempre que há um push no repositório, essa Action é acionada, proporcionando uma forma automática de garantir que o código está seguro.
+
+Testes de Segurança
+Os testes de segurança incluem análise estática de código (SAST) e análise de vulnerabilidades de dependências (SCA). Identificamos e corrigimos possíveis vulnerabilidades, contribuindo para um ambiente seguro e confiável.
+
+Para mais informações sobre os resultados dos testes e como corrigir eventuais problemas, consulte os logs da Action na guia "Actions" deste repositório.
+
