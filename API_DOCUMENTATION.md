@@ -129,6 +129,3 @@ Consulte o código fonte para mais detalhes sobre a implementação da API.
 
 Licença
 Este projeto está licenciado sob a MIT License.
-
-
-Agora, você pode copiar este conteúdo e colar em um arquivo chamado `API_DOCUMENTATION.md` no seu repositório no GitHub. Certifique-se de que o arquivo está no diretório raiz do seu projeto.
