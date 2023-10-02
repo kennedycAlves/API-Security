@@ -12,6 +12,7 @@ Certifique-se de substituir sua_chave_secreta_aqui pela sua própria chave.
 
 
 Instalação
+Certifique-se de ter o Redis instalado e em execução.
 Certifique-se de ter Python 3.x e pip instalados.
 Instale as dependências do projeto:
 
