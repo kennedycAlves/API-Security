@@ -204,9 +204,9 @@ def update_record(record_uid):
     record_key = f'record:{record_uid}'
     if db.exists(record_key):
         db.hmset(record_key, {'name': name, 'address': address, 'cpf': cpf})
-        return jsonify({'message': 'Record updated successfully'})
+        return jsonify({'message': 'success'}), 200
     else:
-        return jsonify({'message': 'Record not found'}), 404
+        return jsonify({'message': 'success'}), 200
 
 @app.route('/record/<uuid:record_uid>', methods=['DELETE'])
 def delete_record(record_uid):
@@ -219,9 +219,9 @@ def delete_record(record_uid):
     record_key = f'record:{record_uid}'
     if db.exists(record_key):
         db.delete(record_key)
-        return jsonify({'message': 'Record deleted successfully'})
+        return jsonify({'message': 'success'}), 200
     else:
-        return jsonify({'message': 'Record not found'}), 404
+        return jsonify({'message': 'success'}), 200
 
 if __name__ == '__main__':
     app.run(debug=True)
