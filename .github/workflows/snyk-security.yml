@@ -26,6 +26,11 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Install Node.js and npm
+        uses: actions/setup-node@v3
+        with:
+          node-version: 14
+
       - name: Install Snyk
         run: |
           npm install -g snyk
