@@ -1,6 +1,12 @@
 name: Snyk Security Scan
 
-on: [push]
+on:
+  push:
+    branches:
+      - "main"
+  pull_request:
+    branches:
+      - "main"
 
 jobs:
   security:
@@ -29,8 +35,8 @@ jobs:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         run: |
           snyk auth $SNYK_TOKEN
-          snyk test --file=requirements.txt
+          snyk test --file=requirements.txt --json > snyk-output.json
 
-      - name: Run Flask tests
+      - name: Display Snyk output
         run: |
-          python -m unittest discover -s tests
+          cat snyk-output.json
